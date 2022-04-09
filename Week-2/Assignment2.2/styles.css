@@ -1,0 +1,54 @@
+
+p{
+    position:relative;
+    left :14rem;
+    top:12rem;
+}
+.square{
+    width:5rem;
+    height:5rem;
+}
+#red{
+    background-color: red;
+    position:relative;
+    left :10rem;
+    top:5rem;
+    transition: transform ease 2s;
+    transform-origin: top left;
+
+}
+#yellow{
+    background-color: yellow;
+    position:relative;
+    left :15rem;
+    transition: transform ease 1s;
+    transform-origin: top right;
+    
+}
+#blue{
+    background-color: blue;
+    position:relative;
+    left :10rem;
+    transition: transform ease 1s;
+    transform-origin: bottom left;
+}
+#green{
+    background-color: green;
+    position:relative;
+    left :15rem;
+    bottom:5rem;
+    transition: transform ease 1s;
+    transform-origin: bottom right;
+}
+.main:hover #red{
+    transform: rotate(90deg);
+}
+.main:hover #yellow{
+    transform: rotate(-90deg);
+}
+.main:hover #blue{
+    transform: rotate(-90deg);
+}
+.main:hover #green{
+    transform: rotate(90deg);
+}
