@@ -1,0 +1,45 @@
+const mathOperations = require('./calculator.js');
+describe("Calculator tests", () => {
+    test('adding 1 + 2 should return 3', () => {
+      // arrange and act
+      var result = mathOperations.sum(1,2)
+    
+      // assert
+      expect(result).toBe(3);
+    });
+    test("adding number and string return combined string",()=>{
+        var result = mathOperations.sum(1,abc)
+        expect(result).toMatch(/1abc/);
+    });
+   
+
+   test("subtracting 2 from 10 should return 8", () => {
+    // arrange and act
+    var result = mathOperations.diff(10,2)
+  
+    // assert
+    expect(result).toBe(8);
+  });
+  test("subtracting 10 from 0 should return -10", () => {
+    // arrange and act
+    var result = mathOperations.diff(0,10)
+  
+    // assert
+    expect(result).toBe(-10);
+  });
+  
+  test("multiplying 2 and 8 should return 16", () => {
+    // arrange and act
+    var result = mathOperations.product(2,8)
+  
+    // assert
+    expect(result).toBe(16);
+  });
+  test("multiplying 0 and 0 should return 0", () => {
+    // arrange and act
+    var result = mathOperations.product(0,0)
+  
+    // assert
+    expect(result).toBe(0);
+  });
+ })
